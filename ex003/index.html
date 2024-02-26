@@ -17,9 +17,9 @@
     <p>Já me livrei da maldição</p>
     <script>
         var n1 = Number.parseFloat (prompt('Digite um número'))
-        var n2 = Number.parseFloat (prompt('Digite outro número'))
-        var soma = n1 - n2
-        alert('A soma dos valores é igual a ' + soma + '!')
+        var n2 = Number (prompt('Digite outro número'))
+        var soma = n1 + n2
+        alert(`A soma de ${n1} e ${n2} e igual a ${soma}`)
         /*
         + pode servir para soma se (number + numer)
         + pode servir para concatenação se (string + string)
@@ -30,6 +30,9 @@
         para converter um string para numero INTEIRO usasse Number.parseInt(n)
         para converter um strinh para numero REAL usasse Number.parseFloat(n)
         para converter um string para numero REAL/INTEIRO usasse Number(n)
+        para converter um numero para string usasse String(n)
+
+        Existe uma forma de escrever uma frase que contem variaveis sem usar concatenacao, basta escrevela da seguinte forma: `Na cidade ${nome da variavel} todo ano se comemora o natal no dia ${nome da variavel}` Ou seja basta a frase estar entre crase, e quando for se referir a alguma variavel usar o comando ${nome da variavel}.
         */
     </script>
 </body>
