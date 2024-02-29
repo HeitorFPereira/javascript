@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Coloque seu nome aqui" id="txt01">
+    <input type="button" value="Enviar" onclick="Clicar()">
+    <div id="nome"></div>
+    <script>
+        function Clicar(){
+            var a = document.getElementById('txt01')
+            var nome = document.getElementById('nome')
+            var test = `Seja bem vindo(a) ${a.value}`
+            nome.innerHTML = test
+        }
+    </script>
+</body>
+</html>
