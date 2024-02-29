@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 500px;
+            height: 100%;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+        .res{
+            background-color: rgb(93, 93, 93);
+            border-style: solid;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .botao{
+            padding: 10px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="res"></div>
+        <input type="button" value="0" class="botao" onclick="colocar()">
+        <input type="button" value="1" class="botao" onclick="colocar2()">
+    </main>
+    <script>
+        function colocar() {
+            var painel = document.getElementsByClassName('res')
+            painel.innerText = '0'
+        }
+    </script>
+</body>
+</html>
