@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como está seu dia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <h1>Heitor Faccin Pereira <i class='bx bxs-user'></i></h1>
+    
+    <div id="principal">
+        <p id="res">TESTE</p>
+        <img src="imagens/imagem_dia.jpg" alt="imagem de céu de dia" id="imagem">
+    </div>
+    
+    <script>
+        
+        var res = document.getElementById('res')
+        var imagem = document.getElementById('imagem')
+        var agora = new Date()
+        var hora = agora.getHours()
+        var corpo = document.body
+        
+        if (hora < 12){
+            res.innerHTML = `Agora são ${hora} horas.`
+            corpo.style.background = '#79B1E4'
+        } else {
+            if (hora > 12 && hora <= 17){
+            res.innerHTML = `Agora são ${hora} horas.`
+            imagem.src = 'imagens/imagem_tarde.jpg'
+            corpo.style.background = '#FA5B32'
+            } else {
+            res.innerHTML = `Agora são ${hora} horas.`
+            imagem.src = 'imagens/imagem_noite.webp'
+            corpo.style.background = '#1E315F'
+            }
+        } 
+            
+        
+    </script>
+</body>
+</html>
