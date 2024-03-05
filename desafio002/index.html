@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador automatico</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <h1>Heitor Faccin Pereira<i class='bx bxs-user'></i></h1>
+    <div class="principal">
+        <h1>Contador</h1>
+        <p>Início: <input type="number" name="" id="start"></p>
+        <p>Final: <input type="number" name="" id="end"></p>
+        <p>Passo: <input type="number" name="" id="order"></p>
+        <input type="button" value="Enviar" id="btn" onclick="enviar()">
+        <p id="res">Preparando contagem...</p>
+    </div> 
+
+    <script>
+        function enviar(){
+            var start = document.getElementById('start').value
+            var end = document.getElementById('end').value
+            var order = document.getElementById('order').value
+            var res = document.getElementById('res')
+            var sum = 0
+
+            for(var start = document.getElementById('start').value ;start <= end; start += order){
+                sum += start
+                res.innerHTML = sum + '<br>'
+            }
+        }
+    </script>
+</body>
+</html>
