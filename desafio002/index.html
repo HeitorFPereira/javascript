@@ -21,15 +21,23 @@
 
     <script>
         function enviar(){
-            var start = document.getElementById('start').value
-            var end = document.getElementById('end').value
-            var order = document.getElementById('order').value
+            var start = document.getElementById('start')
+            var end = document.getElementById('end')
+            var order = document.getElementById('order')
             var res = document.getElementById('res')
-            var sum = 0
+            
 
-            for(var start = document.getElementById('start').value ;start <= end; start += order){
-                sum += start
-                res.innerHTML = sum + '<br>'
+            if(start.value.length == 0 || end.value.length == 0 || order.value.length == 0){
+                alert(`[ERRO] confira os dados e tente novamente!`)
+            } else{
+                res.innerHTML = `Contando:`
+                var i = Number(start.value)
+                var f = Number(end.value)
+                var o = Number(order.value)
+
+                for(var c = i ;c <= f ; c += o){
+                    res.innerHTML += ` ${c} `
+                }
             }
         }
     </script>
