@@ -16,6 +16,7 @@
         <p>Final: <input type="number" name="" id="end"></p>
         <p>Passo: <input type="number" name="" id="order"></p>
         <input type="button" value="Enviar" id="btn" onclick="enviar()">
+        <input type="button" value="Reiniciar" id="btn" onclick="reiniciar()">
         <p id="res">Preparando contagem...</p>
     </div> 
 
@@ -29,16 +30,29 @@
 
             if(start.value.length == 0 || end.value.length == 0 || order.value.length == 0){
                 alert(`[ERRO] confira os dados e tente novamente!`)
+                res.innerHTML = `Tente novamente`
             } else{
-                res.innerHTML = `Contando:`
                 var i = Number(start.value)
                 var f = Number(end.value)
                 var o = Number(order.value)
-
+                if(i < f){
+                    res.innerHTML = `Contando:`
+                
+                    //Contagem crescente 
                 for(var c = i ;c <= f ; c += o){
-                    res.innerHTML += ` ${c} `
+                    res.innerHTML += ` ${c} ` 
+                }
+                } else{
+                    //Contagem regressiva
+                    for(var c = i; c >= f; c -= o)
+                    res.innerHTML += `${c}`
                 }
             }
+        }
+
+        function reiniciar(){
+            var res = document.getElementById('res')
+            res.innerHTML = `Preparando contagem...`
         }
     </script>
 </body>
